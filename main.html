@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sample</title>
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <script type="text/javascript" src="js/script.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    Hello World!!
+    
+    <div id="sample">1</div>
+
+    <div id="sampleButton">
+    <button onclick="funcAdd1()">１を足す</button>
+    <button onclick="funcAdd2()">２を足す</button>
+    </div>
+
+    <form>
+        <fieldset>
+            <legend>編集ファイル</legend>
+            <div>xmlファイルpath：<input type="text" id="xmlpath"></div>
+            <button onclick="getValue('xmlpath');">xml読み込み</button>
+        </fieldset>
+        <fieldset>
+            <legend>編集</legend>
+            <div>NewsLineText：<input type="text" name="itemname"></div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
