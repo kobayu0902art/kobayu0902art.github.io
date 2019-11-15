@@ -1,17 +1,11 @@
-#sample {
-    width: 300px;
-    padding: 30px;
-    font-size: 30px;
-    background-color: red;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
+#greeting {
+    background-color: bisque
 }
-#sampleButton {
-    width: 360px;
-    margin-top: 5px;
-    text-align: center;
+
+#links {
+    
 }
-#sampleButton button {
-    font-size: 16px;
+
+#kobayu {
+    color: red
 }
