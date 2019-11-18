@@ -31,7 +31,7 @@
             <!--// よくわからず使ってるので要勉強 -->
             <!--// コピペ元：https://fukafuka295.jp/oritatami-menu-setti/ -->
             <div onclick="obj=document.getElementById('skills_toggle').style; obj.display=(obj.display=='none')?'block':'none';">
-                <a style="cursor:pointer;" class="python-icon">▼ Python</a>
+                <a style="cursor:pointer;" class="python-icon">▼Python</a>
             </div>
             <div id="skills_toggle">
                 <div id="environment">
@@ -40,21 +40,20 @@
                 </div>
                 <div id="libralies">
                     Libralies:
-                    Openpyxl(xlrd,xlwt)
-                    Pandas
-                    Numpy
+                    <div id="lib">Openpyxl(xlrd,xlwt)</div>
+                    <div id="lib">Pandas</div>
+                    <div id="lib">Numpy</div>
                 </div>
-                <div onclick="obj=document.getElementById('standard_libralies').style; obj.display=(obj.display=='none')?'block':'none';">
-                    <a style="cursor:pointer;">▼ standard libralies:</a>
+                <div id="stlib" onclick="obj=document.getElementById('standard_libralies').style; obj.display=(obj.display=='none')?'block':'none';">
+                    <a style="cursor:pointer;">▼standard libralies:</a>
                 </div>
                 <div id="standard_libralies" style="display:none;clear:both;">
-                    os,glob,shutil
-                    re
-                    datetime
-                    sympy
-                    heapq
-                    itertools
-                    
+                    <div id="lib">os,glob,shutil</div>
+                    <div id="lib">re</div>
+                    <div id="lib">datetime</div>
+                    <div id="lib">sympy</div>
+                    <div id="lib">heapq</div>
+                    <div id="lib">itertools</div>
                 </div>
             </div>
             
@@ -68,10 +67,19 @@
                     GitHub
                 </a>
             </div>
-            <div class="col"><a href= "https://kobayu0902art.github.io/." >github.io<br>(this page)</a></div>
             <div class="col"><a href= "https://qiita.com/kobayu0902art" >Qiita</a></div>
             <div class="col"><a href= "https://atcoder.jp/users/kobayu" >Atcoder</a></div>
             <div class="col"><a href= "https://www.kaggle.com/kobayu" >kaggle</a></div>
+            <div class="col"><a href= "https://kobayu0902art.github.io/." >github.io<br>(this page)</a></div>
         </div>
     </footer>
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item"><a class="page-link" href="index.html">index</a></li>
+        <li class="page-item"><a class="page-link" href="aaaa.html">aaaa</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
 </html>
