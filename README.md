@@ -1,1 +1,1 @@
-# kobayu0902art.github.io
+# kobayu0902art.io

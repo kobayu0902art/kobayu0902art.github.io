@@ -1,0 +1,97 @@
+
+@font-face {
+	font-family: 'Yanone Kaffeesatz';
+	font-style: normal;
+	font-weight: 400;
+	src: url('https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLfGwxTS8d1Q9KiDNCMKLFUM.woff2') format('woff2');
+}
+#greeting {
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 200%;
+    text-align: center;
+}
+
+#links {
+    font-size: 150%;
+    font-family: cursive;
+    text-align: center;
+    grid-row: auto;
+    
+}
+
+#kobayu {
+    color: red
+}
+
+
+footer {
+    background-color: aquamarine;
+}
+
+header {
+    background-color: bisque;
+}
+
+#contentindex {
+    font-size: 175%;
+    text-align: start;
+}
+#skills_toggle {
+    position: static;
+    padding-left: 5%;
+    display:none;
+    clear:both;
+}
+.github-icon::before {
+  color: #333;
+  font-family: fontawesome;
+  content: "\f09b";
+  display: inline-block;
+}
+.kaggle-icon::before {
+  color: #333;
+  font-family: fontawesome;
+  content: "\f5fa";
+  display: inline-block;
+}
+.python-icon::before {
+  color: #1e90ff;
+  font-family: fontawesome;
+  font-size: 150%;
+  content: "\f3e2";
+  display: inline-block;
+  padding-left: 2.5%;
+}
+.python-icon{
+    font-size: 150%;
+}
+
+
+#anaconda {
+    padding-left: 2%;
+    color: forestgreen;
+    font-weight: 750
+}
+
+#lib {
+    padding-left: 2%;
+    font-weight: 500;
+}
+
+
+
+#environment {
+    font-size: 125%
+}
+
+#libralies {
+    font-size: 125%
+}
+
+#standard_libralies {
+    font-size: 125%;
+}
+
+#stlib {
+    font-size: 125%
+}
