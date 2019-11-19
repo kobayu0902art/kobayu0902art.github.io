@@ -138,7 +138,8 @@ header {
 }
 
 .page-item {
-    background-color: #008b8b
+    background-color: #008b8b;
+	width: 100%
 }
 
 #position {
