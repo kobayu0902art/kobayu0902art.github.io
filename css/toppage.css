@@ -54,7 +54,7 @@ footer {
 
 .page {
   height: 100vh;
-  overflow: scroll;
+  overflow: visible;
 }
 
 .box {

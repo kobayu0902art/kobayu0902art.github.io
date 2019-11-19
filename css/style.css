@@ -162,5 +162,10 @@ header {
 }
 #page {
 	color: firebrick;
-	background-color: white
+	background-color: white;
+	border-color: white;
+}
+
+#pagechangebutton {
+	overflow-x: visible;
 }
