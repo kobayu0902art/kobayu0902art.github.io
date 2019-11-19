@@ -27,10 +27,19 @@
 
 footer {
     background-color: aquamarine;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
-
+#header, #body, #footer{
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+}
 header {
     background-color: bisque;
+	top: 0;
+	width: 100%;
 }
 
 #contentindex {

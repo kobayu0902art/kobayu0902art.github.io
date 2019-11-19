@@ -34,6 +34,7 @@
     
     <nav aria-label="Page navigation">
       <ul class="pagination">
+		<div class="col" id="tab"><li class="page-item"><a class="page-link" href="../index.html">TopPage</a></li></div>
         <div class="col" id="tab"><li class="page-item"><a class="page-link" href="introduction.html">introduction</a></li></div>
         <div class="col" id="tab"><li class="page-item"><a class="page-link" href="my_timeline.html">My Timeline</a></li></div>
         <div class="col" id="tab"><li class="page-item"><a class="page-link" href="skill-interest.html">skill-interest</a></li></div>
@@ -43,15 +44,6 @@
     <body>
         <div id='contentindex'>skills:</div>
         <div id='skills'>
-            <div onclick="obj=document.getElementById('webpages').style; obj.display=(obj.display=='none')?'block':'none';">
-                <a style="cursor:pointer;" class="html-icon">▼WebPages</a>
-            </div>
-            <div id="webpages">
-				<div id="web">HTML5</div>
-				<div id="web">CSS3</div>
-				<div id="web">BootStrap4</div>
-				<div id="web">jQuery</div>
-			</div>
             <!--// よくわからず使ってるので要勉強 -->
             <!--// コピペ元：https://fukafuka295.jp/oritatami-menu-setti/ -->
             <div onclick="obj=document.getElementById('skills_toggle').style; obj.display=(obj.display=='none')?'block':'none';">
@@ -81,6 +73,17 @@
                     <div id="lib">itertools</div>
                 </div>
             </div>
+	        <div onclick="obj=document.getElementById('webpages').style; obj.display=(obj.display=='none')?'block':'none';">
+                <a style="cursor:pointer;" class="html-icon">▼WebPages</a>
+				<a style="font-size: 20%; padding-left:5%;">(This page's made by these skills)</a>
+            </div>
+            <div id="webpages">
+				<div id="web">HTML5</div>
+				<div id="web">CSS</div>
+				<div id="web">Bootstrap 4.3.1</div>
+				<div id="web">JavaScript</div>
+				<div id="web">jQuery</div>
+			</div>
             
         </div>
     </body>
