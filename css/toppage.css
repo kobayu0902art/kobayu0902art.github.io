@@ -94,3 +94,10 @@ header {
     font-family: 'Yanone Kaffeesatz';
     font-size: 200%;
 }
+#welcome {
+    color: #e0ffff;
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 500%;
+    font-weight: bold;
+    text-align: center
+}
