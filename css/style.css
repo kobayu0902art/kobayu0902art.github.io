@@ -77,11 +77,22 @@ header {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.html-icon::before {
+  color: #1e90ff;
+  font-family: fontawesome;
+  font-size: 150%;
+  content: "\f13b";
+  display: inline-block;
+  padding-left: 2.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .python-icon{
     font-size: 150%;
 }
-
+.html-icon{
+    font-size: 150%;
+}
 
 #anaconda {
     padding-left: 2%;
@@ -124,4 +135,16 @@ header {
 #position {
   width: 100%;
   height: 100%; 
+}
+
+#webpages {
+    position: static;
+    padding-left: 5%;
+    display:none;
+    clear:both;
+}
+
+#web {
+    font-weight: 500;
+	font-size: 150%;
 }
