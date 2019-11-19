@@ -9,6 +9,7 @@
     font-family: 'Yanone Kaffeesatz';
     font-size: 200%;
     text-align: center;
+    
 }
 
 #links {
@@ -100,4 +101,13 @@ header {
 
 #stlib {
     font-size: 125%
+}
+
+#tab {
+    text-align: center;
+    background-color: #008b8b;
+}
+
+.page-item {
+    background-color: #008b8b
 }
