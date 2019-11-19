@@ -81,13 +81,7 @@ footer {
   
   background-size: cover;
   background-position: center;
-  background-image: url('../image/IMG_20190720_225702_900.jpg');
-  
-  p {
-    font-size: 20px;
-    color: white;
-    line-height: 2;
-  }
+  /*background-image: url('../image/IMG_20190720_225702_900.jpg');*/
 }
 header {
     background-color: bisque;

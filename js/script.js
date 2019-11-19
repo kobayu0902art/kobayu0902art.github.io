@@ -1,12 +1,10 @@
-function funcAdd1() {
-    document.getElementById( "sample" ).innerHTML =
-        parseInt( document.getElementById( "sample" ).firstChild.nodeValue ) + 1;
-}
-function funcAdd2() {
-    document.getElementById( "sample" ).innerHTML =
-        parseInt( document.getElementById( "sample" ).firstChild.nodeValue ) + 2;
-}
-function getValue(idname){
-  // value値を取得する
-  var result = document.getElementById(idname).value;
+function randomimage() {
+var randomList = new Array(
+  "../image/00000IMG_00000_BURST20190801204420105_COVER.jpg",
+  "../image/00100lPORTRAIT_00100_BURST20190625205058848_COVER-EFFECTS.jpg",
+  "../image/1565833638674.JPEG",
+  "../image/1574133310816.JPEG" );
+var num = Math.floor(Math.random() * randomList.length);
+var printHtml = 'url(' + randomList[num] + ');';
+$('.box').css('background-image', printHtml);
 }
