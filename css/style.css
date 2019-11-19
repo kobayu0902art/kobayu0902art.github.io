@@ -120,3 +120,8 @@ header {
 .page-item {
     background-color: #008b8b
 }
+
+#position {
+  width: 100%;
+  height: 100%; 
+}
