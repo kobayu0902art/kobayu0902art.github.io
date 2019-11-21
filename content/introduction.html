@@ -2,12 +2,8 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-		<meta name="viewport" content="width=1024;height=1024" />
         <title>Kobayu's portfolio</title>
         <script type="text/javascript" src="/eel.js"></script>
-
-        
-        <script src="https://kit.fontawesome.com/2e03be4a90.js" crossorigin="anonymous"></script>
         
         <script type="text/javascript" src="../js/script.js" charset="UTF-8"></script>
         <link rel="stylesheet" href="../css/style.css">
@@ -16,6 +12,8 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
+		
+        <script src="https://kit.fontawesome.com/2e03be4a90.js" crossorigin="anonymous"></script>
 
     </head>
     <header>
@@ -34,20 +32,28 @@
     -->
     <!--
     <nav aria-label="Page navigation">
-      <ul class="pagination">
-		<div class="col" id="tab"><li class="page-item"><a class="page-link" href="../index.html">TopPage</a></li></div>
-        <div class="col" id="tab"><li class="page-item"><a class="page-link" href="introduction.html">introduction</a></li></div>
-        <div class="col" id="tab"><li class="page-item"><a class="page-link" href="my_timeline.html">My Timeline</a></li></div>
-        <div class="col" id="tab"><li class="page-item"><a class="page-link" href="skill-interest.html">skill-interest</a></li></div>
+      <div class="container">
+		<ul class="pagination">
+		  <div class="row">
+		<div class="col-3" id="tab"><li class="page-item"><a class="page-link" href="../index.html">TopPage</a></li></div>
+        <div class="col-3" id="tab"><li class="page-item"><a class="page-link" href="introduction.html">introduction</a></li></div>
+        <div class="col-3" id="tab"><li class="page-item"><a class="page-link" href="my_timeline.html">My Timeline</a></li></div>
+        <div class="col-3" id="tab"><li class="page-item"><a class="page-link" href="skill-interest.html">skill-interest</a></li></div>
+			  </div>
       </ul>
+		</div>
     </nav>
 	-->
+	
 	<!-- スマホで変な余白とかcolはみ出すの課題 -->
+	
+	<div class="container">
 	<div id="pagechangebutton" class="row">
-		<button onclick="location.href='../index.html'" id="page" class="col">TopPage</button>
+		<button onclick="location.href='../index.html'" id="page" class="col hoverable">TopPage</button>
 		<button onclick="location.href='introduction.html'" id="page" class="col">introduction</button>
 		<button onclick="location.href='my_timeline.html'" id="page" class="col">My Timeline</button>
 		<button onclick="location.href='skill-interest.html'" id="page" class="col">skill-interest</button>
+	</div>
 	</div>
     
     <body>
@@ -84,7 +90,7 @@
             </div>
 	        <div onclick="obj=document.getElementById('webpages').style; obj.display=(obj.display=='none')?'block':'none';">
                 <a style="cursor:pointer;" class="html-icon">▼WebPages</a>
-				<a style="font-size: 20%; padding-left:5%;">(This page's made by these skills)</a>
+				<a style="font-size: 70%; padding-left:2%;">(This page's made by these skills)</a>
             </div>
             <div id="webpages">
 				<div id="web">HTML5</div>
