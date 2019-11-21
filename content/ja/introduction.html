@@ -5,13 +5,13 @@
         <title>Kobayu's portfolio</title>
         <script type="text/javascript" src="/eel.js"></script>
         
-        <script type="text/javascript" src="../js/script.js" charset="UTF-8"></script>
-        <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript" src="../../js/script.js" charset="UTF-8"></script>
+        <link rel="stylesheet" href="../../css/style.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
 		
         <script src="https://kit.fontawesome.com/2e03be4a90.js" crossorigin="anonymous"></script>
 
@@ -49,18 +49,17 @@
 	
 	<div class="container">
 	<div id="pagechangebutton" class="row">
-		<button onclick="location.href='../index.html'" id="page" class="col hoverable">TopPage</button>
-		<button onclick="location.href='introduction.html'" id="page" class="col">introduction</button>
-		<button onclick="location.href='my_timeline.html'" id="page" class="col">My Timeline</button>
-		<button onclick="location.href='skill-interest.html'" id="page" class="col">skill-interest</button>
-		<button onclick="location.href='works.html'" id="page" class="col">works</button>
+		<button onclick="location.href='../index.html'" id="page" class="col hoverable">トップページ</button>
+		<button onclick="location.href='introduction.html'" id="page" class="col">自己紹介</button>
+		<button onclick="location.href='my_timeline.html'" id="page" class="col">My 年表</button>
+		<button onclick="location.href='skill-interest.html'" id="page" class="col">得意なこと-<br>やりたいこと</button>
 	</div>
 	</div>
     
     <body>
-		<div id="contentindex">Final Education: </div>
-		<div id='lib'>Fukushima University (The Faculty of Symbiotic Systems Science)</div>
-        <div id='contentindex'>skills:</div>
+		<div id="contentindex">最終学歴: </div>
+		<div id='lib'>福島大学　共生システム理工学類</div>
+        <div id='contentindex'>スキル:</div>
         <div id='skills'>
             <!--// よくわからず使ってるので要勉強 -->
             <!--// コピペ元：https://fukafuka295.jp/oritatami-menu-setti/ -->
@@ -69,18 +68,18 @@
             </div>
             <div id="skills_toggle">
                 <div id="environment">
-                    Environment
+                    環境
                     <div id="anaconda">Anaconda</div>
                 </div>
                 <div id="libralies">
-                    Libralies
+                    使ったことのあるライブラリ、得意なライブラリ
                     <div id="lib">Openpyxl(xlrd,xlwt)</div>
                     <div id="lib">Pandas</div>
                     <div id="lib">Numpy</div>
                     <div id="lib">Eel</div>
                 </div>
                 <div id="stlib" onclick="obj=document.getElementById('standard_libralies').style; obj.display=(obj.display=='none')?'block':'none';">
-                    <a style="cursor:pointer;">▼standard libralies</a>
+                    <a style="cursor:pointer;">▼標準ライブラリ系</a>
                 </div>
                 <div id="standard_libralies" style="display:none;clear:both;">
                     <div id="lib">os,glob,shutil</div>
@@ -92,8 +91,8 @@
                 </div>
             </div>
 	        <div onclick="obj=document.getElementById('webpages').style; obj.display=(obj.display=='none')?'block':'none';">
-                <a style="cursor:pointer;" class="html-icon">▼WebPages</a>
-				<a style="font-size: 70%; padding-left:2%;">(This page's made by these skills)</a>
+                <a style="cursor:pointer;" class="html-icon">▼Web系</a>
+				<a style="font-size: 70%; padding-left:2%;">(このページは以下のスキルを使って作られています)</a>
             </div>
             <div id="webpages">
 				<div id="web">HTML5</div>
@@ -107,9 +106,9 @@
     </body>
     <footer>
 		<div>language:</div>
-		<button onclick="location.href='en/introduction.html'">English</button>
-		<button onclick="location.href='ja/introduction.html'">Japanese</button>
-		<button onclick="location.href='introduction.html'" style="color: aquamarine;background-color: aquamarine;border: none;box-shadow: 0">original</button>
+		<button onclick="location.href='../en/introduction.html'">English</button>
+		<button onclick="location.href='introduction.html'">Japanese</button>
+		<button onclick="location.href='../introduction.html'" style="color: aquamarine;background-color: aquamarine;border: none;box-shadow: 0">original</button>
         <div id='contentindex'>links:</div>
         <div class='row' id='links'>
             <div class="col">

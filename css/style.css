@@ -160,8 +160,6 @@ header {
 #page {
 	color: firebrick;
 	background-color: white;
-	border-color: white;
+	border: none;
 }
 
-#pagechangebutton {
-}
