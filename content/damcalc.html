@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>DamageCalculator</title>       
+        <script type="text/javascript" src="js/script.js" charset="UTF-8"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+	<body>
+		<header style="text-align: center;font-family: 'Yanone Kaffeesatz'; font-size: 300%">DamageCalculator</header>
+		<article>
+			<div>
+				<div>
+					<a>こうげき：</a>
+					<a>種族値</a>
+					<input type="number" id="bs" oninput="calc()">
+					<a>個体値</a>
+					<input type="number" id="iv" oninput="calc()">
+					<a>努力値</a>
+					<input type="number" id="ev" oninput="calc()">
+					<a>性格補正</a>
+					<select id="nc" oninput="calc()">
+						<option value="1.1">上昇</option>
+						<option value="1" selected>なし</option>
+						<option value="0.9">下降</option>
+					</select>
+				</div>
+				<div>
+					<a>実数値：</a>
+					<a id="result">---</a>
+				</div>
+			</div>
+		</article>
+		<footer>
+		</footer>
+	</body>
+</html>
