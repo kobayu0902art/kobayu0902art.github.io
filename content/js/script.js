@@ -136,6 +136,7 @@ function ehcalc(){
 	let ehev =Number(document.getElementById("ehev").value);
 	let ehresult = Math.floor((ehbs+ehiv/2+ehev/8+60))
 	document.getElementById("ehresult").innerHTML = ehresult;
+	document.getElementById("ehdisp").innerHTML = ehresult;
 }
 
 function eacalc(){
