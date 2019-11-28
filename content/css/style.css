@@ -4,3 +4,19 @@
 	font-weight: 400;
 	src: url('https://fonts.gstatic.com/s/yanonekaffeesatz/v8/YDAoLskQQ5MOAgvHUQCcLfGwxTS8d1Q9KiDNCMKLFUM.woff2') format('woff2');
 }
+
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-item-three {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+.feature-item-five {
+  flex: 0 0 20%;
+  max-width: 20&;
+}

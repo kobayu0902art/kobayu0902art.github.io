@@ -2,15 +2,14 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>DamageCalculator</title>       
-        
+        <title>DamageCalculator</title>
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/script.js" charset="UTF-8"></script>
     </head>
 	<body>
-		<header style="text-align: center;font-family: 'Yanone Kaffeesatz'; font-size: 300%">DamageCalculator</header>
+		<header style="text-align: center;font-family: 'Yanone Kaffeesatz'; font-size: 300%">Damage Calculator</header>
 		<article>
 			<!--
 			<div>
@@ -35,126 +34,304 @@
 				</div>
 			</div>
 			-->
-			<div>
+			
+			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+			
+			<div style="background-color: aquamarine; padding-top: 1%">
+				<div style="padding-bottom: 1%;font-size:150%">味方ステータス</div>
 				<div>
-					<a>HP：</a>
-					<a>種族値</a>
-					<input type="number" id="hbs" oninput="hcalc()">
-					<a>個体値</a>
-					<input type="number" id="hiv" oninput="hcalc()" value="31">
-					<a>努力値</a>
-					<input type="number" id="hev" oninput="hcalc()">
+					<div>
+						<a style="padding-right: 2.5em">HP：</a>
+						<a>種族値</a>
+						<input type="number" id="hbs" oninput="hcalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="hiv" oninput="hcalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="hev" oninput="hcalc()" style="width: 10%">
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="hresult">---</a>
+					</div>
 				</div>
 				<div>
-					<a>実数値：</a>
-					<a id="hresult">---</a>
+					<div>
+						<a>こうげき：</a>
+						<a>種族値</a>
+						<input type="number" id="abs" oninput="acalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="aiv" oninput="acalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="aev" oninput="acalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="anc" oninput="acalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="aresult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>ぼうぎょ：</a>
+						<a>種族値</a>
+						<input type="number" id="bbs" oninput="bcalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="biv" oninput="bcalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="bev" oninput="bcalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="bnc" oninput="bcalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="bresult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>とくこう：</a>
+						<a>種族値</a>
+						<input type="number" id="cbs" oninput="ccalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="civ" oninput="ccalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="cev" oninput="ccalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="cnc" oninput="ccalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="cresult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>とくぼう：</a>
+						<a>種族値</a>
+						<input type="number" id="dbs" oninput="dcalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="div" oninput="dcalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="dev" oninput="dcalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="dnc" oninput="dcalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="dresult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>すばやさ：</a>
+						<a>種族値</a>
+						<input type="number" id="sbs" oninput="scalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="siv" oninput="scalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="sev" oninput="scalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="snc" oninput="scalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="sresult">---</a>
+					</div>
 				</div>
 			</div>
-			<div>
+			
+			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+			
+			<div style="background-color: lightsalmon; padding-top: 1%">
+				<div style="padding-bottom: 1%;font-size:150%">相手ステータス</div>
 				<div>
-					<a>こうげき：</a>
-					<a>種族値</a>
-					<input type="number" id="abs" oninput="acalc()">
-					<a>個体値</a>
-					<input type="number" id="aiv" oninput="acalc()" value="31">
-					<a>努力値</a>
-					<input type="number" id="aev" oninput="acalc()">
-					<a>性格補正</a>
-					<select id="anc" oninput="acalc()">
-						<option value="1.1">上昇</option>
-						<option value="1" selected>なし</option>
-						<option value="0.9">下降</option>
-					</select>
+					<div>
+						<a style="padding-right: 2.5em">HP：</a>
+						<a>種族値</a>
+						<input type="number" id="ehbs" oninput="ehcalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="ehiv" oninput="ehcalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="ehev" oninput="ehcalc()" style="width: 10%">
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="ehresult">---</a>
+					</div>
 				</div>
 				<div>
-					<a>実数値：</a>
-					<a id="aresult">---</a>
+					<div>
+						<a>こうげき：</a>
+						<a>種族値</a>
+						<input type="number" id="eabs" oninput="eacalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="eaiv" oninput="eacalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="eaev" oninput="eacalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="eanc" oninput="eacalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="earesult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>ぼうぎょ：</a>
+						<a>種族値</a>
+						<input type="number" id="ebbs" oninput="ebcalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="ebiv" oninput="ebcalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="ebev" oninput="ebcalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="ebnc" oninput="ebcalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="ebresult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>とくこう：</a>
+						<a>種族値</a>
+						<input type="number" id="ecbs" oninput="eccalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="eciv" oninput="eccalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="ecev" oninput="eccalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="ecnc" oninput="eccalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="ecresult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>とくぼう：</a>
+						<a>種族値</a>
+						<input type="number" id="edbs" oninput="edcalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="ediv" oninput="edcalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="edev" oninput="edcalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="ednc" oninput="edcalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="edresult">---</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a>すばやさ：</a>
+						<a>種族値</a>
+						<input type="number" id="esbs" oninput="escalc()" style="width: 10%">
+						<a>個体値</a>
+						<input type="number" id="esiv" oninput="escalc()" style="width: 10%" value="31">
+						<a>努力値</a>
+						<input type="number" id="esev" oninput="escalc()" style="width: 10%">
+						<a>性格補正</a>
+						<select id="esnc" oninput="escalc()" style="width: 10%">
+							<option value="1.1">上昇</option>
+							<option value="1" selected>なし</option>
+							<option value="0.9">下降</option>
+						</select>
+					</div>
+					<div>
+						<a>実数値：</a>
+						<a id="esresult">---</a>
+					</div>
 				</div>
 			</div>
+			
+			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+			
 			<div>
-				<div>
-					<a>ぼうぎょ：</a>
-					<a>種族値</a>
-					<input type="number" id="bbs" oninput="bcalc()">
-					<a>個体値</a>
-					<input type="number" id="biv" oninput="bcalc()" value="31">
-					<a>努力値</a>
-					<input type="number" id="bev" oninput="bcalc()">
-					<a>性格補正</a>
-					<select id="bnc" oninput="bcalc()">
-						<option value="1.1">上昇</option>
-						<option value="1" selected>なし</option>
-						<option value="0.9">下降</option>
-					</select>
+				<div style="background-color: skyblue; padding-top: 1%; padding-bottom: 1%">ダメージ計算</div>
+				
+				
+				<div class="feature-list">
+					<div class="feature-item-three">
+					</div>
+					<div class="feature-item-three">
+						<a>じぶんこうげき：</a>
+						<a id="adisp">---</a>
+					</div>
+					<div class="feature-item-three">
+						<a>じぶんとくこう：</a>
+						<a id="cdisp">---</a>
+					</div>
 				</div>
-				<div>
-					<a>実数値：</a>
-					<a id="bresult">---</a>
+				
+				
+				<div class="feature-list">
+					<div class="feature-item-three">
+						<a>あいてHP：</a>
+						<a id="ehdisp">---</a>
+					</div>
+					<div class="feature-item-three">
+						<a>あいてぼうぎょ：</a>
+						<a id="ebdisp">---</a>
+					</div>
+					<div class="feature-item-three">
+						<a>あいてとくぼう：</a>
+						<a id="eddisp">---</a>
+					</div>
 				</div>
-			</div>
-			<div>
-				<div>
-					<a>とくこう：</a>
-					<a>種族値</a>
-					<input type="number" id="cbs" oninput="ccalc()">
-					<a>個体値</a>
-					<input type="number" id="civ" oninput="ccalc()" value="31">
-					<a>努力値</a>
-					<input type="number" id="cev" oninput="ccalc()">
-					<a>性格補正</a>
-					<select id="cnc" oninput="ccalc()">
-						<option value="1.1">上昇</option>
-						<option value="1" selected>なし</option>
-						<option value="0.9">下降</option>
-					</select>
-				</div>
-				<div>
-					<a>実数値：</a>
-					<a id="cresult">---</a>
-				</div>
-			</div>
-			<div>
-				<div>
-					<a>とくぼう：</a>
-					<a>種族値</a>
-					<input type="number" id="dbs" oninput="dcalc()">
-					<a>個体値</a>
-					<input type="number" id="div" oninput="dcalc()" value="31">
-					<a>努力値</a>
-					<input type="number" id="dev" oninput="dcalc()">
-					<a>性格補正</a>
-					<select id="dnc" oninput="dcalc()">
-						<option value="1.1">上昇</option>
-						<option value="1" selected>なし</option>
-						<option value="0.9">下降</option>
-					</select>
-				</div>
-				<div>
-					<a>実数値：</a>
-					<a id="dresult">---</a>
-				</div>
-			</div>
-			<div>
-				<div>
-					<a>すばやさ：</a>
-					<a>種族値</a>
-					<input type="number" id="sbs" oninput="scalc()">
-					<a>個体値</a>
-					<input type="number" id="siv" oninput="scalc()" value="31">
-					<a>努力値</a>
-					<input type="number" id="sev" oninput="scalc()">
-					<a>性格補正</a>
-					<select id="snc" oninput="scalc()">
-						<option value="1.1">上昇</option>
-						<option value="1" selected>なし</option>
-						<option value="0.9">下降</option>
-					</select>
-				</div>
-				<div>
-					<a>実数値：</a>
-					<a id="sresult">---</a>
-				</div>
-			</div>
+				
+				<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+				
+				
+				
+				<!--
+				<input type="number" id="damage" oninput="damcalc()">
+				<meter class="currenthp" max="100" low="20" high="50" optimum="100" value="100"></meter>
+				-->
+				
+			</div>			
 		</article>
 		<footer>
 		</footer>
