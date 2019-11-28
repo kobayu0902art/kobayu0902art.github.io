@@ -11,6 +11,21 @@
 	<body>
 		<header style="text-align: center;font-family: 'Yanone Kaffeesatz'; font-size: 300%">Damage Calculator</header>
 		<article>
+			<div>
+				<div>デモボタン</div>
+				<!-- <input type="button" onclick="set()" value="set"> -->
+				<input type="button" onclick="ex1()" value="ASドラパルト-H4ミミッキュ対面ゴーストダイブ">
+			</div>
+			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+			<div>
+				<div>攻撃側プリセット</div>
+				<input type="button" onclick="ex2()" value="ASドラパルト">
+				<input type="button" onclick="ex3()" value="H微振りASドラパルト">
+				<input type="button" onclick="ex4()" value="ASミミッキュ">
+				<input type="button" onclick="ex5()" value="CSサザンドラ">
+				<input type="button" onclick="ex6()" value="すなかきドリュウズ">
+			</div>
 			<!--
 			<div>
 				<div>
@@ -38,7 +53,7 @@
 			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
 			
 			<div style="background-color: aquamarine; padding-top: 1%">
-				<div style="padding-bottom: 1%;font-size:150%">味方ステータス</div>
+				<div style="padding-bottom: 1%;font-size:150%">攻撃側ステータス</div>
 				<div>
 					<div>
 						<a style="padding-right: 2.5em">HP：</a>
@@ -163,8 +178,17 @@
 			
 			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
 			
+			<div>
+				<div>防御側プリセット</div>
+				<input type="button" onclick="ex7()" value="ASドラパルト">
+				<input type="button" onclick="ex8()" value="H微振りASドラパルト">
+				<input type="button" onclick="ex9()" value="ASミミッキュ">
+				<input type="button" onclick="ex10()" value="CSサザンドラ">
+				<input type="button" onclick="ex11()" value="すなかきドリュウズ">
+			</div>
+			
 			<div style="background-color: lightsalmon; padding-top: 1%">
-				<div style="padding-bottom: 1%;font-size:150%">相手ステータス</div>
+				<div style="padding-bottom: 1%;font-size:150%">防御側ステータス</div>
 				<div>
 					<div>
 						<a style="padding-right: 2.5em">HP：</a>
@@ -288,43 +312,102 @@
 			</div>
 			
 			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+			<div style="padding-top: 1%;padding-bottom: 1%;"></div>
 			
 			<div>
 				<div style="background-color: skyblue; padding-top: 1%; padding-bottom: 1%">ダメージ計算</div>
 				
-				
-				<div class="feature-list">
-					<div class="feature-item-three">
+				<div style="background-color: cadetblue">
+					<div class="feature-list">
+						<div class="feature-item-three">
+						</div>
+						<div class="feature-item-three">
+							<a>じぶんこうげき：</a>
+							<a id="adisp">---</a>
+						</div>
+						<div class="feature-item-three">
+							<a>じぶんとくこう：</a>
+							<a id="cdisp">---</a>
+						</div>
 					</div>
-					<div class="feature-item-three">
-						<a>じぶんこうげき：</a>
-						<a id="adisp">---</a>
+
+					<div class="feature-list">
+						<div class="feature-item-three">
+							<a>あいてHP：</a>
+							<a id="ehdisp">---</a>
+						</div>
+						<div class="feature-item-three">
+							<a>あいてぼうぎょ：</a>
+							<a id="ebdisp">---</a>
+						</div>
+						<div class="feature-item-three">
+							<a>あいてとくぼう：</a>
+							<a id="eddisp">---</a>
+						</div>
 					</div>
-					<div class="feature-item-three">
-						<a>じぶんとくこう：</a>
-						<a id="cdisp">---</a>
+
+					<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+					<div>
+						<div>わざプリセット</div>
+						<input type="button" onclick="ex12()" value="ゴーストダイブ">
+						<input type="button" onclick="ex13()" value="ドラゴンアロー">
+						<input type="button" onclick="ex14()" value="シャドークロー">
+						<input type="button" onclick="ex15()" value="りゅうせいぐん">
+						<input type="button" onclick="ex16()" value="あくのはどう">
+						<input type="button" onclick="ex17()" value="じしん">
+						<input type="button" onclick="ex18()" value="アイアンヘッド">
+						<input type="button" onclick="ex19()" value="じゃれつく">
+						<input type="button" onclick="ex20()" value="ラスターカノン">
+						<input type="button" onclick="ex21()" value="サイコファング">
+					</div>
+					<div>
+						<a style="padding-right: 2.5em">わざ：</a>
+						<a>ぶんるい</a>
+						<select id="aorc" oninput="damagecalc()" style="width: 10%">
+							<option value="0">物理</option>
+							<option value="1">特殊</option>
+						</select>
+						<a>いりょく</a>
+						<input type="number" id="power" oninput="damagecalc()" style="width: 10%">
+						<a>タイプ一致補正</a>
+						<select id="match" oninput="damagecalc()" style="width: 10%">
+							<option value="1.5">あり</option>
+							<option value="1" selected>なし</option>
+						</select>
+						<a>タイプ相性</a>
+						<select id="comp" oninput="damagecalc()" style="width: 20%">
+							<option value="4">ばつぐん(4倍)</option>
+							<option value="2">ばつぐん(2倍)</option>
+							<option value="1" selected>等倍</option>
+							<option value="0.5">いまひとつ(1/2)</option>
+							<option value="0.25">いまひとつ(1/4)</option>
+							<option value="0">こうかがない</option>
+						</select>
+					</div>
+					<div>タイプ</div>
+					<input type="button" onclick="ex22()" value="一致ばつぐん">
+					<input type="button" onclick="ex23()" value="不一致ばつぐん">
+					<input type="button" onclick="ex24()" value="一致等倍">
+					<input type="button" onclick="ex25()" value="不一致等倍">
+					<div style="padding-top: 1%;padding-bottom: 1%;"></div>
+					<div>
+						<a style="padding-right: 2.5em">ダメージ：</a>
+						<a id="mintemp">---</a>
+						<a>～</a>
+						<a id="temp">---</a>
+					</div>
+					<div>
+						<a style="padding-right: 2.2em">のこりHP：</a>
+						<a id="mincurrentHP">---</a>
+						<a>～</a>
+						<a id="maxcurrentHP" style="padding-right: 1em">---</a>
+						<a>(</a>
+						<a id="minrate">---</a>
+						<a>%～</a>
+						<a id="maxrate">---</a>
+						<a>%)</a>
 					</div>
 				</div>
-				
-				
-				<div class="feature-list">
-					<div class="feature-item-three">
-						<a>あいてHP：</a>
-						<a id="ehdisp">---</a>
-					</div>
-					<div class="feature-item-three">
-						<a>あいてぼうぎょ：</a>
-						<a id="ebdisp">---</a>
-					</div>
-					<div class="feature-item-three">
-						<a>あいてとくぼう：</a>
-						<a id="eddisp">---</a>
-					</div>
-				</div>
-				
-				<div style="padding-top: 1%;padding-bottom: 1%;"></div>
-				
-				
 				
 				<!--
 				<input type="number" id="damage" oninput="damcalc()">
