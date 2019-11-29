@@ -686,4 +686,24 @@ function damagecalc(){
 	document.getElementById("maxcurrentHP").innerHTML = ehresult-mintemp;
 	document.getElementById("minrate").innerHTML = (ehresult-temp)/ehresult*100;
 	document.getElementById("maxrate").innerHTML = (ehresult-mintemp)/ehresult*100;
+	
+	//width = document.getElementById("maxhpbar").innerHTML;
+	tempwidth = (ehresult-mintemp)/ehresult*100;
+	if (tempwidth>0){
+		tempwidth = String(tempwidth)+"%";
+		document.getElementById('maxhpbar').style.width = tempwidth;
+		if ((ehresult-temp)>0){
+		tempwidth = ((ehresult-temp)/(ehresult-mintemp))*100;
+		tempwidth = String(tempwidth)+"%";
+		document.getElementById('minhpbar').style.width = tempwidth;
+		//width.width = tempwidth;
+		console.log(tempwidth+"%")
+		}
+		else{
+			document.getElementById('minhpbar').style.width = "0%";
+		}
+	}
+	else{
+		document.getElementById('maxhpbar').style.width = "0%";
+	}
 }
